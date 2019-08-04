@@ -13,203 +13,29 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/UR"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="@string/_1_patient_ur"
-            android:textColor="@android:color/black" />
-
-        <EditText
-            android:id="@+id/UR_Text"
+            android:id="@+id/headache_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/Age_text"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="@string/_2_age_of_patient"
-            android:textColor="@android:color/black" />
-
-        <EditText
-            android:id="@+id/Age"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/gender_text"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="@string/_3_gender"
-            android:textColor="@android:color/black" />
-
-        <RadioGroup
-            android:id="@+id/gender_group"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/male"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/male" />
-
-            <RadioButton
-                android:id="@+id/female"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/female" />
-
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/pmhx"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="@string/_4_past_medical_history"
-            android:textColor="@android:color/black" />
-
-        <RadioGroup
-            android:id="@+id/pmhx_group"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/pmhx_y"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Yes" />
-
-            <RadioButton
-                android:id="@+id/pmhx_n"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="No" />
-
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/woke"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="5. Woke with symptoms"
-            android:textColor="@android:color/black" />
-
-        <RadioGroup
-            android:id="@+id/woke_group"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/woke_y"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Yes" />
-
-            <RadioButton
-                android:id="@+id/woke_n"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="No" />
-
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/wellweekb4"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="6. Well in the week before presentation"
-            android:textColor="@android:color/black" />
-
-        <RadioGroup
-            android:id="@+id/wellweekb4_group"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/wellweekb4_y"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Yes" />
-
-            <RadioButton
-                android:id="@+id/wellweekb4_n"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="No" />
-
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/medicaltransport"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="7. Transport to hospital by ambulance"
-            android:textColor="@android:color/black" />
-
-        <RadioGroup
-            android:id="@+id/medicaltransport_group"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/medicaltransport_y"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Yes" />
-
-            <RadioButton
-                android:id="@+id/medicaltransport_n"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="No" />
-
-        </RadioGroup>
-
-
-        <TextView
-            android:id="@+id/headache"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
             android:text="@string/_1_headache" />
 
         <RadioGroup
-            android:id="@+id/headache_group"
+            android:id="@+id/headachegroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/headache_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/headache_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -217,27 +43,29 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/vomit"
+            android:id="@+id/vomit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
             android:text="@string/_2_vomiting" />
 
         <RadioGroup
-            android:id="@+id/vomit_group"
+            android:id="@+id/vomitgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/vomit_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/vomit_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -245,27 +73,29 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/dizziness"
+            android:id="@+id/dizzinesstext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
             android:text="@string/_3_dizziness" />
 
         <RadioGroup
-            android:id="@+id/dizziness_group"
+            android:id="@+id/dizzinessgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/dizziness_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/dizziness_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -273,27 +103,30 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/speechloss"
+            android:id="@+id/speechlosstext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
             android:text="@string/_4_speechloss" />
 
         <RadioGroup
-            android:id="@+id/speechloss_group"
+            android:id="@+id/speechlossgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/speechloss_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:paddingBottom="10dp"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/speechloss_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -301,27 +134,29 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/focalnumb"
+            android:id="@+id/focalnumbtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
             android:text="@string/_5_focal_numbness" />
 
         <RadioGroup
-            android:id="@+id/focalnumb_group"
+            android:id="@+id/focalnumbgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/focalnumb_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/focalnumb_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -332,24 +167,26 @@
             android:id="@+id/focalweak"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
             android:text="@string/_6_focal_weakness" />
 
         <RadioGroup
-            android:id="@+id/focalweak_group"
+            android:id="@+id/focalweakgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/focalweak_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/focalweak_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -357,27 +194,30 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/seizure"
+            android:id="@+id/seizuretext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
             android:text="@string/_7_seizure" />
 
         <RadioGroup
-            android:id="@+id/seizure_group"
+            android:id="@+id/seizuregroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/seizure_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:paddingBottom="10dp"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/seizure_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -385,27 +225,29 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/mentalstate"
+            android:id="@+id/mentalstatetext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
             android:text="@string/_8_altered_mental_status" />
 
         <RadioGroup
-            android:id="@+id/mentalstate_group"
+            android:id="@+id/mentalstategroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/mentalstate_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/mentalstate_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -413,142 +255,181 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/loc"
+            android:id="@+id/loctext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
             android:text="@string/_9_loss_of_consciousness" />
 
         <RadioGroup
-            android:id="@+id/loc_group"
+            android:id="@+id/locgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/loc_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/loc_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/vision"
+            android:id="@+id/visiontext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
             android:text="@string/_10_vision" />
 
         <RadioGroup
-            android:id="@+id/vision_group"
+            android:id="@+id/visiongroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/vision_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/vision_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/ataxia"
+            android:id="@+id/ataxiatext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
             android:text="@string/_11_ataxia" />
 
         <RadioGroup
-            android:id="@+id/ataxia_group"
+            android:id="@+id/ataxiagroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="12dp">
 
             <RadioButton
                 android:id="@+id/ataxia_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/ataxia_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/vertigo"
+            android:id="@+id/vertigotext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/_11_vertigo" />
+            android:paddingBottom="4dp"
+            android:text="12. Vertigo" />
 
         <RadioGroup
-            android:id="@+id/vertigo_group"
+            android:id="@+id/vertigogroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/vertigo_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/vertigo_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/other"
+            android:id="@+id/othertext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/_12_other" />
+            android:paddingBottom="4dp"
+            android:text="13. Other" />
 
         <RadioGroup
-            android:id="@+id/other_group"
+            android:id="@+id/othergroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/other_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/other_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/photophobiatext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="14. Photophobia" />
+
+        <RadioGroup
+            android:id="@+id/photophobiagroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/photophobia_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/photophobia_no"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/testb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Button" />

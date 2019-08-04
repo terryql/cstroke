@@ -13,27 +13,29 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/puplils"
+            android:id="@+id/puplilstet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
             android:text="1. Abnormal pupillary response" />
 
         <RadioGroup
-            android:id="@+id/pupils_group"
+            android:id="@+id/pupilsgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/pupils_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/pupils_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -68,6 +70,180 @@
 
         </RadioGroup>
 
+
+
+        <TextView
+            android:id="@+id/eyeresponsetext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="2. Eye response" />
+
+        <RadioGroup
+            android:id="@+id/eyeresponsegroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/eyeresponse1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No opening at any time, no interfering factor" />
+
+            <RadioButton
+                android:id="@+id/eyeresponse2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="After finger tip stimulus" />
+
+            <RadioButton
+                android:id="@+id/eyeresponse3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="After spoken or shouted request" />
+
+            <RadioButton
+                android:id="@+id/eyeresponse4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Open before stimulus" />
+
+            <RadioButton
+                android:id="@+id/eyeresponseNT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Not Testable" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/verbalresponsetext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="4. Verbal response" />
+
+        <RadioGroup
+            android:id="@+id/verbalresponsegroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/verbalresponse1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No audible response, no interfering factor" />
+
+            <RadioButton
+                android:id="@+id/verbalresponse2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Only moans / groans" />
+
+            <RadioButton
+                android:id="@+id/verbalresponse3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Intelligible single words" />
+
+            <RadioButton
+                android:id="@+id/verbalresponse4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Not orientated but communication coherently" />
+
+            <RadioButton
+                android:id="@+id/verbalresponse5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Correctly gives name, place and date" />
+
+            <RadioButton
+                android:id="@+id/verbalresponseNT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Not Testable" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/motorresponsetext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="5. Motor response" />
+
+        <RadioGroup
+            android:id="@+id/motorresponsegroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/motorresponse1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No movement in arms / legs, no interfering factor" />
+
+            <RadioButton
+                android:id="@+id/motorresponse2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Extends arm at elbow"
+                tools:text="Extends arm at elbow" />
+
+            <RadioButton
+                android:id="@+id/motorresponse3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bends arm at elbow, features clearly predominantly abnormal" />
+
+            <RadioButton
+                android:id="@+id/motorresponse4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bends arm at elbow rapidly but features not predominantly abnormal" />
+
+            <RadioButton
+                android:id="@+id/motorresponse5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Brings hand above clavicle to stimulus on head neck" />
+
+            <RadioButton
+                android:id="@+id/motorresponse6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Obey 2-part request" />
+
+            <RadioButton
+                android:id="@+id/motorresponseNT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Not Testable" />
+        </RadioGroup>
+
         <TextView
             android:id="@+id/grsi_abngcs"
             android:layout_width="match_parent"
@@ -97,83 +273,89 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/walknotokcrf2"
+            android:id="@+id/walknotokcrf2text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="4. walknotokcrf2"/>
+            android:paddingBottom="4dp"
+            android:text="6. walknotokcrf2" />
 
         <RadioGroup
-            android:id="@+id/walknotokcrf2_group"
+            android:id="@+id/walknotokcrf2group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/walknotokcrf2_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Yes"/>
+                android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/walknotokcrf2_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="No"/>
+                android:text="No" />
 
         </RadioGroup>
 
         <TextView
-            android:id="@+id/weakarm"
+            android:id="@+id/weakarmtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="5. Arm weakness"/>
+            android:paddingBottom="4dp"
+            android:text="7. Arm weakness" />
 
         <RadioGroup
-            android:id="@+id/weakarm_group"
+            android:id="@+id/weakarmgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/weakarm_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Yes"/>
+                android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/weakarm_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="No"/>
+                android:text="No" />
 
         </RadioGroup>
 
         <TextView
-            android:id="@+id/weakhand"
+            android:id="@+id/weakhandtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="6. Hand weakness"/>
+            android:paddingBottom="4dp"
+            android:text="8. Hand weakness" />
 
         <RadioGroup
-            android:id="@+id/weakhand_group"
+            android:id="@+id/weakhandgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/weakhand_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/weakhand_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -181,27 +363,88 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/weakface"
+            android:id="@+id/upperfacialtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="7. Facial weakness " />
+            android:paddingBottom="4dp"
+            android:text="9. Upper facial weakness" />
 
         <RadioGroup
-            android:id="@+id/weakface_group"
-            android:layout_width="match_parent"
+            android:id="@+id/upperfacialgroup"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/upperfacial_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/upperfacial_n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/lowerfacialtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="10. Lower facial weakness" />
+
+        <RadioGroup
+            android:id="@+id/lowerfacialgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/lowerfacial_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/lowerfacial_n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/weakfacetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="11. Facial weakness "
+            tools:text="Yes" />
+
+        <RadioGroup
+            android:id="@+id/weakfacegroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/weakface_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/weakface_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -209,27 +452,29 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/weakleg"
+            android:id="@+id/weaklegtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="8. Leg weakness" />
+            android:paddingBottom="4dp"
+            android:text="12. Leg weakness" />
 
         <RadioGroup
-            android:id="@+id/weakleg_group"
+            android:id="@+id/weakleggroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/weakleg_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/weakleg_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -237,243 +482,261 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/sensearm"
+            android:id="@+id/sensearmtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="9. Arm sensory disturbance " />
+            android:paddingBottom="4dp"
+            android:text="13. Arm sensory disturbance " />
 
         <RadioGroup
-            android:id="@+id/sensearm_group"
+            android:id="@+id/sensearmgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/sensearm_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/sensearm_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/senseleg"
+            android:id="@+id/senselegtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="10. Leg sensory disturbance" />
+            android:paddingBottom="4dp"
+            android:text="14. Leg sensory disturbance" />
 
         <RadioGroup
-            android:id="@+id/senseleg_group"
+            android:id="@+id/senseleggroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/senseleg_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/senseleg_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/senseface"
+            android:id="@+id/sensefacetext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="11. Face sensory disturbance" />
+            android:paddingBottom="4dp"
+            android:text="15. Face sensory disturbance" />
 
         <RadioGroup
             android:id="@+id/senseface_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/senseface_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/senseface_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/eyemovement"
+            android:id="@+id/eyemovementext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="12. Abnormal eye movement" />
+            android:paddingBottom="4dp"
+            android:text="16. Abnormal eye movement" />
 
         <RadioGroup
-            android:id="@+id/eyemovement_group"
+            android:id="@+id/eyemovementgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/eyemovement_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/eyemovement_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/dysarthria"
+            android:id="@+id/dysarthriatext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="13. Dysarthria " />
+            android:paddingBottom="4dp"
+            android:text="17. Dysarthria " />
 
         <RadioGroup
-            android:id="@+id/dysarthria_group"
+            android:id="@+id/dysarthriagroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/dysarthria_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/dysarthria_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/dysphasia"
+            android:id="@+id/dysphasiatext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="14. Dysarthria " />
+            android:paddingBottom="4dp"
+            android:text="18. Dysphasia" />
 
         <RadioGroup
-            android:id="@+id/dysphasia_group"
+            android:id="@+id/dysphasiagroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="4dp">
 
             <RadioButton
                 android:id="@+id/dysphasia_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/dysphasia_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/visualdef"
+            android:id="@+id/visualdeftext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="15. Visual defects" />
+            android:paddingBottom="4dp"
+            android:text="19. Visual defects" />
 
         <RadioGroup
-            android:id="@+id/visualdef_group"
+            android:id="@+id/visualdefgroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="4dp">
 
             <RadioButton
                 android:id="@+id/visualdef_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/visualdef_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/senseneg"
+            android:id="@+id/sensenegtext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="15. Sensory neglects" />
+            android:paddingBottom="4dp"
+            android:text="20. Sensory neglects" />
 
         <RadioGroup
-            android:id="@+id/senseneg_group"
+            android:id="@+id/senseneggroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/senseneg_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/senseneg_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/ataxia1"
+            android:id="@+id/ataxiatext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="16. Ataxia on examination" />
+            android:paddingBottom="4dp"
+            android:text="21. Ataxia on examination" />
 
         <RadioGroup
-            android:id="@+id/ataxia1_group"
+            android:id="@+id/ataxiagroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/ataxia1_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/ataxia1_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -481,54 +744,58 @@
 
 
         <TextView
-            android:id="@+id/noneuro"
+            android:id="@+id/noneurotext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="17. No neurological signs" />
+            android:paddingBottom="4dp"
+            android:text="22. No neurological signs" />
 
         <RadioGroup
-            android:id="@+id/noneuro_group"
+            android:id="@+id/noneurogroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/noneuro_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/noneuro_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/other2"
+            android:id="@+id/other2text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="18. Other neurological signs" />
+            android:paddingBottom="4dp"
+            android:text="23. Other neurological signs" />
 
         <RadioGroup
-            android:id="@+id/other2_group"
+            android:id="@+id/other2group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/other2_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/other2_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />

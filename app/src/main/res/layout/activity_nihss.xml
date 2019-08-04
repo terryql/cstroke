@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fillViewport="false">
+
+    <LinearLayout
+
+        android:layout_width="395dp"
+        android:layout_height="715dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/consciousness_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:paddingBottom="4dp"
+            android:text="1a.  Level of consciousness" />
+
+        <RadioGroup
+            android:id="@+id/consciousnessgroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/consciousness0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Alert"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/cousciousness1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Minor stimulation"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/cousciousness2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Repeated stimulation"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/cousciousness3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Responds only with reflex motor or autonomic effects or totally unresponsive, flaccid, areflexic"
+                android:textSize="10sp"
+                tools:text="Responds only with reflex motor or autonomic effects or totally unresponsive" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/locquestion_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="1b.  LOC questions:" />
+
+        <RadioGroup
+            android:id="@+id/locquestiongroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/locquestion0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Both correctly"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/locquestion1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="One correctly"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/locquestion2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Neither correctly"
+                android:textSize="10sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/loccommand_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="1c.  LOC commands" />
+
+        <RadioGroup
+            android:id="@+id/loccommandgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/loccommand0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Both correctly"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/loccommand1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="One correctly"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/loccommand2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Neither correctly"
+                android:textSize="10sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/bestgaze_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="2. Best Gaze" />
+
+        <RadioGroup
+            android:id="@+id/bestgazegroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/bestgaze0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Normal"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/bestgaze1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Partial gaze palsy."
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/bestgaze2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Forced deviation"
+                android:textSize="10sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/visual_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="3. Visual" />
+
+        <RadioGroup
+            android:id="@+id/visualgroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/visual0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No visual loss"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/visual1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Partial hemianopia"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/visual2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Complete hemianopia"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/visual3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bilateral hemianopia"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/facialpalsy_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="4. Facial palsy" />
+
+        <RadioGroup
+            android:id="@+id/facialpalsy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/facialpalsy0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Normal"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/facialpalsy1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Minor paralysis"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/facialpalsy2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Partial paralysis"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/facialpalsy3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Complete of one or both side"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/leftarm_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="5a. Left Arm" />
+
+        <RadioGroup
+            android:id="@+id/leftarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/leftarm0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No drift"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/leftarm1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Drift"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/leftarm2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Some effort against gravity"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/leftarm3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No effort against gravity"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/leftarm4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No movement"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/leftarm5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Amputation"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/rightarm_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="5b. Right Arm" />
+
+        <RadioGroup
+            android:id="@+id/rightarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/rightarm0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No drift"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rightarm1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Drift"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rightarm2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Some effort against gravity"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rightarm3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No effort against gravity"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rightarm4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No movement"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rightarm5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Amputation"
+                android:textSize="10sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/leftleg_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="6a. Left Leg" />
+
+        <RadioGroup
+            android:id="@+id/leftleg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/leftleg0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No drift"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/leftleg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Drift"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/leftleg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Some effort against gravity"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/leftleg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No effort against gravity"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/leftleg4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No movement"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/leftleg5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Amputation"
+                android:textSize="10sp" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:id="@+id/rightleg_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="6b. Right Leg" />
+
+        <RadioGroup
+            android:id="@+id/rightleg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/rightleg0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No drift"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rightleg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Drift"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rightleg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Some effort against gravity"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rightleg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No effort against gravity"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rightleg4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No movement"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/rightleg5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Amputation"
+                android:textSize="10sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/limbataxia_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="7. Limb ataxia" />
+
+        <RadioGroup
+            android:id="@+id/limbataxia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/limbataxia0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Absent"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/limbataxia1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Present in one limb"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/limbataxia2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Present in two limbs"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/sensory_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="8. Sensory" />
+
+        <RadioGroup
+            android:id="@+id/sensory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/sensory0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Normal"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/sensory1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mild to moderate sensory loss"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/sensory2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Severe to total sensory loss"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/language_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="9. Best language" />
+
+        <RadioGroup
+            android:id="@+id/language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/language0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No aphasia, normal"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/language1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mild to moderate aphasia"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/language2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Severe aphasia"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/language3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mute, global aphasia"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/dysarthria_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="10.  Dysarthria" />
+
+        <RadioGroup
+            android:id="@+id/dysarthriatext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/dysarthria0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Normal"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/dysarthria1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mild to moderate"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/dysarthria2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Severe"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/dysarthria3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Intubated or other physical barrier,"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="11. Extinction and inattention" />
+
+        <RadioGroup
+            android:id="@+id/extinction_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/extinction0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="No abnormality"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/extinction1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Visual, tactile, auditory, spatial, or personal inattention or extinction to bilateral simultaneous stimulation in one of the sensory modalities"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/extinction2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Profound hemi-inattention or hemi-inattention to more than one modality"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button_calPEDNIHSS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PedNIHSS" />
+    </LinearLayout>
+</ScrollView>

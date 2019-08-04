@@ -161,11 +161,11 @@ public class calculatortriage extends AppCompatActivity {
         View3.setText("The probability of haemorrhagic stroke is " + prob_haemorrhagic);
 
         //SharedPreferences preferences = this.getSharedPreferences("variables", 0);
-      // int genderx = preferences.getInt("gender",0);
-       // String test1 = preferences.getString("test",null);
+        // int genderx = preferences.getInt("gender",0);
+        // String test1 = preferences.getString("test",null);
 
        // View1.setText("OK"+test1);
-      /* TextView View1 =new TextView(this); */
+       /* TextView View1 =new TextView(this); */
 
     }
 }

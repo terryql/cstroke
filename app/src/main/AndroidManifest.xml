@@ -11,6 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="label,allowBackup">
+        <activity android:name=".calculatorNIHSS"></activity>
+        <activity android:name=".activity_nihss" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +23,7 @@
         <activity android:name=".triage" />
         <activity android:name=".strokescroll" />
         <activity android:name=".calculatortriage" />
-        <activity android:name=".calculatorstroke"></activity>
+        <activity android:name=".calculatorstroke" />
     </application>
 
 </manifest>

@@ -34,7 +34,6 @@ public class triage extends AppCompatActivity implements IOneFragmentClickListen
         getSupportActionBar().hide();// hide the ActionBar
         setContentView(R.layout.activity_triage);
 
-        //初始化视图
         initViews();
     }
 

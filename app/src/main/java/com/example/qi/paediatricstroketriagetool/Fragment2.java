@@ -26,19 +26,19 @@ public class Fragment2 extends Fragment {
         listener0 = new View.OnClickListener() {
             public void onClick(View v) {
 
-                RadioGroup gender_group = (RadioGroup) getActivity().findViewById(R.id.gender_group);
+                RadioGroup gender_group = (RadioGroup) getActivity().findViewById(R.id.gendergroup);
                 int checkRadioButtonId_gender = gender_group.getCheckedRadioButtonId();
                 int gender = 0;
                 switch (checkRadioButtonId_gender) {
-                    case R.id.male:
+                    case R.id.gender0:
                         gender = 1;
                         break;
-                    case R.id.female:
+                    case R.id.gender1:
                         gender = 0;
                         break;
                 }
 
-                RadioGroup pmhx_group = (RadioGroup) getActivity().findViewById(R.id.pmhx_group);
+                RadioGroup pmhx_group = (RadioGroup) getActivity().findViewById(R.id.pmhxgroup);
                 int checkRadioButtonId_pmhx = pmhx_group.getCheckedRadioButtonId();
                 int pmhx = 0;
                 switch (checkRadioButtonId_pmhx) {
@@ -51,7 +51,7 @@ public class Fragment2 extends Fragment {
                 }
 
 
-                RadioGroup wellwakeb4_group = (RadioGroup) getActivity().findViewById(R.id.wellweekb4_group);
+                RadioGroup wellwakeb4_group = (RadioGroup) getActivity().findViewById(R.id.wellweekb4group);
                 int checkRadioButtonId_wellwakeb4 = wellwakeb4_group.getCheckedRadioButtonId();
                 int wellwakeb4 = 0;
                 switch (checkRadioButtonId_wellwakeb4) {
@@ -63,7 +63,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup medicaltransport_group = (RadioGroup) getActivity().findViewById(R.id.medicaltransport_group);
+                RadioGroup medicaltransport_group = (RadioGroup) getActivity().findViewById(R.id.medicaltransportgroup);
                 int checkRadioButtonId_medicaltransport = medicaltransport_group.getCheckedRadioButtonId();
                 int medicaltransport = 0;
                 switch (checkRadioButtonId_medicaltransport) {
@@ -76,7 +76,7 @@ public class Fragment2 extends Fragment {
                 }
 
 
-                RadioGroup woke_group = (RadioGroup) getActivity().findViewById(R.id.woke_group);
+                RadioGroup woke_group = (RadioGroup) getActivity().findViewById(R.id.wokegroup);
                 int checkRadioButtonId_woke = woke_group.getCheckedRadioButtonId();
                 int woke = 0;
                 switch (checkRadioButtonId_woke) {
@@ -88,7 +88,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup vertigo_group = (RadioGroup) getActivity().findViewById(R.id.vertigo_group);
+                RadioGroup vertigo_group = (RadioGroup) getActivity().findViewById(R.id.vertigogroup);
                 int checkRadioButtonId_vertigo = vertigo_group.getCheckedRadioButtonId();
                 int vertigovalue = 0;
                 switch (checkRadioButtonId_vertigo) {
@@ -100,7 +100,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup headache_group = (RadioGroup) getActivity().findViewById(R.id.headache_group);
+                RadioGroup headache_group = (RadioGroup) getActivity().findViewById(R.id.headachegroup);
                 int checkRadioButtonId_headache = headache_group.getCheckedRadioButtonId();
                 int headacevalue = 0;
                 switch (checkRadioButtonId_headache) {
@@ -112,7 +112,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup vomit_group = (RadioGroup) getActivity().findViewById(R.id.vomit_group);
+                RadioGroup vomit_group = (RadioGroup) getActivity().findViewById(R.id.vomitgroup);
                 int checkRadioButtonId_vomit = vomit_group.getCheckedRadioButtonId();
                 int vomitvalue = 0;
                 switch (checkRadioButtonId_vomit) {
@@ -124,7 +124,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup dizziness_group = (RadioGroup) getActivity().findViewById(R.id.dizziness_group);
+                RadioGroup dizziness_group = (RadioGroup) getActivity().findViewById(R.id.dizzinessgroup);
                 int checkRadioButtonId_dizziness = dizziness_group.getCheckedRadioButtonId();
                 int dizzinessvalue = 0;
                 switch (checkRadioButtonId_dizziness) {
@@ -136,7 +136,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup speechloss_group = (RadioGroup) getActivity().findViewById(R.id.speechloss_group);
+                RadioGroup speechloss_group = (RadioGroup) getActivity().findViewById(R.id.speechlossgroup);
                 int checkRadioButtonId_speechloss = speechloss_group.getCheckedRadioButtonId();
                 int speechlossvalue = 0;
                 switch (checkRadioButtonId_speechloss) {
@@ -148,7 +148,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup focalnumb_group = (RadioGroup) getActivity().findViewById(R.id.focalnumb_group);
+                RadioGroup focalnumb_group = (RadioGroup) getActivity().findViewById(R.id.focalnumbgroup);
                 int checkRadioButtonId_focalnumb = focalnumb_group.getCheckedRadioButtonId();
                 int focalnumbvalue = 0;
                 switch (checkRadioButtonId_focalnumb) {
@@ -160,7 +160,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup focalweak_group = (RadioGroup) getActivity().findViewById(R.id.focalweak_group);
+                RadioGroup focalweak_group = (RadioGroup) getActivity().findViewById(R.id.focalweakgroup);
                 int checkRadioButtonId_focalweek = focalweak_group.getCheckedRadioButtonId();
                 int focalweekvalue = 0;
                 switch (checkRadioButtonId_focalweek) {
@@ -172,7 +172,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup seizure_group = (RadioGroup) getActivity().findViewById(R.id.seizure_group);
+                RadioGroup seizure_group = (RadioGroup) getActivity().findViewById(R.id.seizuregroup);
                 int checkRadioButtonId_seizure = seizure_group.getCheckedRadioButtonId();
                 int seizurevalue = 0;
                 switch (checkRadioButtonId_seizure) {
@@ -184,7 +184,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup mentalstate_group = (RadioGroup) getActivity().findViewById(R.id.mentalstate_group);
+                RadioGroup mentalstate_group = (RadioGroup) getActivity().findViewById(R.id.mentalstategroup);
                 int checkRadioButtonId_mentalstate = mentalstate_group.getCheckedRadioButtonId();
                 int mentalstatevalue = 0;
                 switch (checkRadioButtonId_mentalstate) {
@@ -196,7 +196,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup loc_group = (RadioGroup) getActivity().findViewById(R.id.loc_group);
+                RadioGroup loc_group = (RadioGroup) getActivity().findViewById(R.id.locgroup);
                 int checkRadioButtonId_loc = loc_group.getCheckedRadioButtonId();
                 int locvalue = 0;
                 switch (checkRadioButtonId_loc) {
@@ -208,7 +208,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup vision_group = (RadioGroup) getActivity().findViewById(R.id.vision_group);
+                RadioGroup vision_group = (RadioGroup) getActivity().findViewById(R.id.visiongroup);
                 int checkRadioButtonId_vision = vision_group.getCheckedRadioButtonId();
                 int visionvalue = 0;
                 switch (checkRadioButtonId_vision) {
@@ -220,7 +220,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup ataxia_group = (RadioGroup) getActivity().findViewById(R.id.ataxia_group);
+                RadioGroup ataxia_group = (RadioGroup) getActivity().findViewById(R.id.ataxiagroup);
                 int checkRadioButtonId_ataxia = ataxia_group.getCheckedRadioButtonId();
                 int ataxiavalue = 0;
                 switch (checkRadioButtonId_ataxia) {
@@ -232,7 +232,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                RadioGroup other_group = (RadioGroup) getActivity().findViewById(R.id.other_group);
+                RadioGroup other_group = (RadioGroup) getActivity().findViewById(R.id.othergroup);
                 int checkRadioButtonId_other = other_group.getCheckedRadioButtonId();
                 int othervalue = 0;
                 switch (checkRadioButtonId_other) {
@@ -244,7 +244,7 @@ public class Fragment2 extends Fragment {
                         break;
                 }
 
-                tv1 = (TextView)rootView.findViewById(R.id.headache);
+                tv1 = (TextView)rootView.findViewById(R.id.headache_text);
                 SharedPreferences fragmentpreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
                // int gender = fragmentpreferences.getInt("gender",0);
                // int pmhx = fragmentpreferences.getInt("pmhx",0);

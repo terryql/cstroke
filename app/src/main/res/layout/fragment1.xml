@@ -5,7 +5,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.qi.paediatricstroketriagetool.Fragment1">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="false">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,61 +18,116 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/UR"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="@string/_1_patient_ur"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            android:id="@+id/studyID_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Study ID number" />
 
         <EditText
-            android:id="@+id/UR_Text"
+            android:id="@+id/studyID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingBottom="10dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/age_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_2_age_of_patient" />
+
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:paddingBottom="10dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/dateofsymptomonset_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. Date of symptom onset" />
+
+        <EditText
+            android:id="@+id/dateofsymptomonset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:textSize="14sp" />
+            android:paddingBottom="10dp" />
 
         <TextView
-            android:id="@+id/Age_text"
+            android:id="@+id/timeofsymptomsonset_text"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="@string/_2_age_of_patient"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:text="4. Time of symptom onset" />
 
         <EditText
-            android:id="@+id/Age"
+            android:id="@+id/timeofsymptomsonset"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number"
-            android:textSize="14sp" />
+            android:inputType="textPersonName"
+            android:paddingBottom="10dp" />
+
+        <TextView
+            android:id="@+id/dateofarrival_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5. Date of arrival" />
+
+        <EditText
+            android:id="@+id/dateofarrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingBottom="10dp" />
+
+        <TextView
+            android:id="@+id/timeofarrivaldate_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6. Time of symptom onset" />
+
+        <EditText
+            android:id="@+id/timeofarrivaldate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingBottom="10dp" />
 
         <TextView
             android:id="@+id/gender_text"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="@string/_3_gender"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="7. Gender" />
 
         <RadioGroup
-            android:id="@+id/gender_group"
-            android:layout_width="match_parent"
+            android:id="@+id/gendergroup"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
-                android:id="@+id/male"
-                android:layout_width="0dp"
+                android:id="@+id/gender0"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/male" />
 
             <RadioButton
-                android:id="@+id/female"
-                android:layout_width="0dp"
+                android:id="@+id/gender1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/female" />
@@ -78,26 +138,26 @@
             android:id="@+id/pmhx_text"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:text="@string/_4_past_medical_history"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            android:paddingBottom="4dp"
+            android:text="8. Past medical history" />
 
         <RadioGroup
-            android:id="@+id/pmhx_group"
-            android:layout_width="match_parent"
+            android:id="@+id/pmhxgroup"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/pmhx_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/pmhx_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -106,28 +166,28 @@
 
         <TextView
             android:id="@+id/woke_text"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="5. Woke with symptoms"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="9.  Woke with symptoms" />
 
         <RadioGroup
-            android:id="@+id/woke_group"
-            android:layout_width="match_parent"
+            android:id="@+id/wokegroup"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/woke_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/woke_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -136,28 +196,28 @@
 
         <TextView
             android:id="@+id/wellweekb4_text"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="6. Well in the week before presentation"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="10. Well in the week before presentation" />
 
         <RadioGroup
-            android:id="@+id/wellweekb4_group"
+            android:id="@+id/wellweekb4group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/wellweekb4_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/wellweekb4_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -166,28 +226,28 @@
 
         <TextView
             android:id="@+id/medicaltransport_text"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:text="7. Transport to hospital by ambulance"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:text="11. Transport to hospital by ambulance" />
 
         <RadioGroup
-            android:id="@+id/medicaltransport_group"
+            android:id="@+id/medicaltransportgroup"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <RadioButton
                 android:id="@+id/medicaltransport_y"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Yes" />
 
             <RadioButton
                 android:id="@+id/medicaltransport_n"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="No" />
@@ -200,6 +260,13 @@
             android:layout_height="wrap_content"
             android:text="@string/button" />
 
-    </LinearLayout>
+        <EditText
+            android:id="@+id/editText8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date" />
 
+    </LinearLayout>
+    </ScrollView>
 </FrameLayout>

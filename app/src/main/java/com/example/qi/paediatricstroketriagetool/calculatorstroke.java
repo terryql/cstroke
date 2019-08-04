@@ -16,78 +16,116 @@ public class calculatorstroke extends AppCompatActivity {
         setContentView(R.layout.activity_calculatorstroke);
         View2 = (TextView) findViewById(R.id.stroke);
 
-
         Intent intent = getIntent();
-        int gender_stroke = intent.getIntExtra("gender", 0);
 
-        // Demographic variables
-        int gender = intent.getIntExtra("gender", 0);
-        int vertigo = intent.getIntExtra("vertigo", 0);
-        int pmhx = intent.getIntExtra("pmhx", 0);
-        int woke = intent.getIntExtra("woke", 0);
-        int wellweekb4 = intent.getIntExtra("wellweekb4", 0);
+        /**
+         * Definition of demographic variables
+         * age - age at presentation, clcuated as seen date-date of birth (years)
+         * datesymptomonset  - date of symptom onset
+         * timesymptomonset  - time of symptom onset
+         * datearrivaldate   - date of arrival
+         * timearrivaldate   - time of arrival
+         * improving         - symptomes improving
+         */
+        int gender           = intent.getIntExtra("gender", 0);
+        int pmhx             = intent.getIntExtra("pmhx", 0);
+        int woke             = intent.getIntExtra("woke", 0);
+        int wellweekb4       = intent.getIntExtra("wellweekb4", 0);
+        int headace          = intent.getIntExtra("headacex", 0);
+        int sudden           = intent.getIntExtra("sudden", 0);
+        int improving        = intent.getIntExtra("improving",0);
+        int age              = intent. getIntExtra("age",0);
+
+        /**
+         * Definition of process variables
+         */
+        int referred         = intent.getIntExtra("referred", 0);
+        int highcategory     = intent.getIntExtra("highcategory", 0);
         int medicaltransport = intent.getIntExtra("medicaltransport", 0);
-        int headace = intent.getIntExtra("headacex", 0);
-        int referred = intent.getIntExtra("referred", 0); // * not defined
-        int highcategory = intent.getIntExtra("highcategory", 0); // * not defined
-        int sudden = intent.getIntExtra("sudden", 0);//* not defined
 
-        //grouped signs
-        int gspeechpos = intent.getIntExtra("gspeechpos", 0); // * not defined
-        int gmotorpos = intent.getIntExtra("gmotorpos", 0);// * not defined
-        int glowgcs = intent.getIntExtra("glowgcs", 0);
-        int gotherpos = intent.getIntExtra("gotherpos", 0);
-        int gsensepos = intent.getIntExtra("gsensepos", 0); // not defined
-        int gsignpos = intent.getIntExtra("gsignpos", 0);// not defined
-        int gabngcs = intent.getIntExtra("gabngcs", 0);
+        /**
+         * Definition of grouped signs
+         * gabngcs           - Abnormal Glasgow coma score, ranging from [1,15)
+         */
+        int gspeechpos       = intent.getIntExtra("gspeechpos", 0);
+        int gmotorpos        = intent.getIntExtra("gmotorpos", 0);
+        int glowgcs          = intent.getIntExtra("glowgcs", 0);
+        int gotherpos        = intent.getIntExtra("gotherpos", 0);
+        int gsensepos        = intent.getIntExtra("gsensepos", 0);
+        int gsignpos         = intent.getIntExtra("gsignpos", 0);
+        int gabngcs          = intent.getIntExtra("gabngcs", 0);
 
-        // Symptoms variables
-        int vomit = intent.getIntExtra("vomit", 0);
-        int dizziness = intent.getIntExtra("dizziness", 0);
-        int speechloss = intent.getIntExtra("speechloass", 0);
-        int focalnumb = intent.getIntExtra("focalnumb", 0);
-        int focalweek = intent.getIntExtra("focalweek", 0);
-        int seizure = intent.getIntExtra("seizure", 0);
-        int mentalstate = intent.getIntExtra("mentalstate", 0);
-        int loc = intent.getIntExtra("loc", 0);
-        int other = intent.getIntExtra("other", 0);
-        int vision = intent.getIntExtra("vision", 0);
-        int ataxia = intent.getIntExtra("ataxia", 0);
+        /**
+         * Definition of symptoms
+         */
+        int vomit            = intent.getIntExtra("vomit", 0);
+        int dizziness        = intent.getIntExtra("dizziness", 0);
+        int speechloss       = intent.getIntExtra("speechloass", 0);
+        int focalnumb        = intent.getIntExtra("focalnumb", 0);
+        int focalweek        = intent.getIntExtra("focalweek", 0);
+        int seizure          = intent.getIntExtra("seizure", 0);
+        int mentalstate      = intent.getIntExtra("mentalstate", 0);
+        int loc              = intent.getIntExtra("loc", 0);
+        int other            = intent.getIntExtra("other", 0);
+        int vision           = intent.getIntExtra("vision", 0);
+        int ataxia           = intent.getIntExtra("ataxia", 0);
+        int vertigo          = intent.getIntExtra("vertigo", 0);
+        int photophobia      = intent.getIntExtra("photophobia",0);
 
-        //Individual signs variables
-        int pupils = intent.getIntExtra("pupils", 0);
-        int abngcs = intent.getIntExtra("abngcs", 0);
-        int lowGCS = intent.getIntExtra("lowGCS", 0);
-        int walknotokcrf2 = intent.getIntExtra("walknotokcrf2", 0);
-        int weakarm = intent.getIntExtra("weakarm", 0);
-        int weakhand = intent.getIntExtra("weakhand", 0);
-        int weakface = intent.getIntExtra("weakface", 0);
-        int weakleg = intent.getIntExtra("weakleg", 0);
-        int sensearm = intent.getIntExtra("sensearm", 0);
-        int senseleg = intent.getIntExtra("senseleg", 0);
-        int senseface = intent.getIntExtra("senseface", 0);
-        int eyemovemt = intent.getIntExtra("eyemovemt", 0);
-        int dysarthria = intent.getIntExtra("dysarthria", 0);
-        int dysphasia = intent.getIntExtra("dysphasia", 0);
-        int visualdef = intent.getIntExtra("visualdef", 0);
-        int senseneg = intent.getIntExtra("senseneg", 0);
-        int ataxia1 = intent.getIntExtra("ataxia1", 0);
-        int noneuro = intent.getIntExtra("noneuro", 0);
-        int other2 = intent.getIntExtra("other2", 0);
+        /**
+         * Definition of individual signs
+         * eyeresponse       - eye response, [1,2,3,4,NoTestable]
+         * verbalresponse    - verbal response, [1,2,3,4,5,NoTestable]
+         * motorresponse     - motor response, [1,2,3,4,5,6,NoTestable]
+         * upface            - upper facial weakness
+         * lowface           - lower facial weakness
+         */
+        int pupils           = intent.getIntExtra("pupils", 0);
+        int abngcs           = intent.getIntExtra("abngcs", 0);
+        int lowGCS           = intent.getIntExtra("lowGCS", 0);
+        int walknotokcrf2    = intent.getIntExtra("walknotokcrf2", 0);
+        int weakarm          = intent.getIntExtra("weakarm", 0);
+        int weakhand         = intent.getIntExtra("weakhand", 0);
+        int weakface         = intent.getIntExtra("weakface", 0);
+        int weakleg          = intent.getIntExtra("weakleg", 0);
+        int sensearm         = intent.getIntExtra("sensearm", 0);
+        int senseleg         = intent.getIntExtra("senseleg", 0);
+        int senseface        = intent.getIntExtra("senseface", 0);
+        int eyemovemt        = intent.getIntExtra("eyemovemt", 0);
+        int dysarthria       = intent.getIntExtra("dysarthria", 0);
+        int dysphasia        = intent.getIntExtra("dysphasia", 0);
+        int visualdef        = intent.getIntExtra("visualdef", 0);
+        int senseneg         = intent.getIntExtra("senseneg", 0);
+        int ataxia1          = intent.getIntExtra("ataxia1", 0);
+        int noneuro          = intent.getIntExtra("noneuro", 0);
+        int other2           = intent.getIntExtra("other2", 0);
+        int eyeresponse      = intent.getIntExtra("eyeresponse",0);
+        int verbalresponse   = intent.getIntExtra("verbalresponse",0);
+        int motorresponse    = intent.getIntExtra("motorresponse",0);
+        int upface           = intent.getIntExtra("upface",0);
+        int lowface          = intent.getIntExtra("lowface",0);
 
-        //define probabilities
-        double cart_mimics_model1 = 0;
-        double cart_mimics_model2 = 0;
-        double cart_mimics_model3 = 0;
-        double cart_mimics_model4 = 0;
-        double cart_mimics_model5 = 0;
-        double cart_mimics_model6 = 0;
-        double cart_ischaemic_model1 = 0;
-        double cart_ischaemic_model2 = 0;
-        double cart_ischaemic_model3 = 0;
-        double cart_ischaemic_model4 = 0;
-        double cart_ischaemic_model5 = 0;
-        double cart_ischaemic_model6 = 0;
+        /**
+         * Definition of PeDNIHSS Score (PeDNIHSS)
+         */
+
+        int PeDNIHSS = 0;
+
+        /**
+         * Definition of individual model's probability
+         */
+        double cart_mimics_model1       = 0;
+        double cart_mimics_model2       = 0;
+        double cart_mimics_model3       = 0;
+        double cart_mimics_model4       = 0;
+        double cart_mimics_model5       = 0;
+        double cart_mimics_model6       = 0;
+        double cart_ischaemic_model1    = 0;
+        double cart_ischaemic_model2    = 0;
+        double cart_ischaemic_model3    = 0;
+        double cart_ischaemic_model4    = 0;
+        double cart_ischaemic_model5    = 0;
+        double cart_ischaemic_model6    = 0;
         double cart_haemorrhagic_model1 = 0;
         double cart_haemorrhagic_model2 = 0;
         double cart_haemorrhagic_model3 = 0;
@@ -95,30 +133,49 @@ public class calculatorstroke extends AppCompatActivity {
         double cart_haemorrhagic_model5 = 0;
         double cart_haemorrhagic_model6 = 0;
 
-        double nb_mimics_model1 = 0;
-        double nb_mimics_model3 = 0;
-        double nb_mimics_model4 = 0;
-        double nb_mimics_model5 = 0;
-        double nb_mimics_model6 = 0;
-        double nb_mimics_model2 = 0;
-        double nb_ischaemic_model1 = 0;
-        double nb_ischaemic_model2 = 0;
-        double nb_ischaemic_model3 = 0;
-        double nb_ischaemic_model4 = 0;
-        double nb_ischaemic_model5 = 0;
-        double nb_ischaemic_mode6 = 0;
-        double nb_haemorrhagic_model1 = 0;
-        double nb_haemorrhagic_model2 = 0;
-        double nb_haemorrhagic_model3 = 0;
-        double nb_haemorrhagic_model4 = 0;
-        double nb_haemorrhagic_model5 = 0;
-        double nb_haemorrhagic_model6 = 0;
+        double nb_mimics_model1         = 0;
+        double nb_mimics_model3         = 0;
+        double nb_mimics_model4         = 0;
+        double nb_mimics_model5         = 0;
+        double nb_mimics_model6         = 0;
+        double nb_mimics_model2         = 0;
+        double nb_ischaemic_model1      = 0;
+        double nb_ischaemic_model2      = 0;
+        double nb_ischaemic_model3      = 0;
+        double nb_ischaemic_model4      = 0;
+        double nb_ischaemic_model5      = 0;
+        double nb_ischaemic_mode6       = 0;
+        double nb_haemorrhagic_model1   = 0;
+        double nb_haemorrhagic_model2   = 0;
+        double nb_haemorrhagic_model3   = 0;
+        double nb_haemorrhagic_model4   = 0;
+        double nb_haemorrhagic_model5   = 0;
+        double nb_haemorrhagic_model6   = 0;
 
-        double buckets_mimics_cart = 0, buckets_haemorrhagic_cart = 0, buckets_ischaemic_cart = 0, stacking_mimics_cart = 0, stacking_haemorrhagic_cart = 0, stacking_ischaemic_cart = 0;
-        double buckets_mimics_nb = 0, buckets_haemorrhagic_nb = 0, buckets_ischaemic_nb = 0, stacking_mimics_nb = 0, stacking_haemorrhagic_nb = 0, stacking_ischaemic_nb = 0;
-        double probability_mimics = 0, probability_haemorrhagic = 0, probability_ischaemic = 0;
 
-        // cart model1 of mimics classification
+        /**
+         * Definition of ensemble model's probability
+         */
+        double buckets_mimics_cart        = 0;
+        double buckets_haemorrhagic_cart  = 0;
+        double buckets_ischaemic_cart     = 0;
+        double stacking_mimics_cart       = 0;
+        double stacking_haemorrhagic_cart = 0;
+        double stacking_ischaemic_cart    = 0;
+        double buckets_mimics_nb          = 0;
+        double buckets_haemorrhagic_nb    = 0;
+        double buckets_ischaemic_nb       = 0;
+        double stacking_mimics_nb         = 0;
+        double stacking_haemorrhagic_nb   = 0;
+        double stacking_ischaemic_nb      = 0;
+        double probability_mimics         = 0;
+        double probability_haemorrhagic   = 0;
+        double probability_ischaemic      = 0;
+
+        /**
+         * CART model for classification of stroke mimics
+         */
+
         if (other == 0 && medicaltransport == 1 && referred == 1) {
             cart_mimics_model1 = 0.17;
         } else {
@@ -155,7 +212,10 @@ public class calculatorstroke extends AppCompatActivity {
             }
         }
 
-        //cart model1 of ischaemic stroke classification
+        /**
+         * CART model for classification of ischaemic stroke
+         */
+
         if (focalweek == 0) {
             cart_ischaemic_model1 = 0.07;
         } else {
@@ -174,7 +234,10 @@ public class calculatorstroke extends AppCompatActivity {
             }
         }
 
-        //cart model1 of haemorrhagic stroke classification
+        /**
+         * CART model for classification of haemorrhagic stroke
+         */
+
         if (highcategory == 0) {
             cart_haemorrhagic_model1 = 0.05;
         } else {
@@ -197,7 +260,9 @@ public class calculatorstroke extends AppCompatActivity {
             }
         }
 
-        // cart model2 of stroke mimics classification
+        /**
+         * CART model 2 for classification of stroke mimics
+         */
         if (gspeechpos == 1 && gmotorpos == 1) {
             cart_mimics_model2 = 0.31;
         } else {
@@ -238,7 +303,9 @@ public class calculatorstroke extends AppCompatActivity {
             }
         }
 
-        // cart model2 of ischaemic stroke classification
+        /**
+         * CART model 2 for classification of ischaemic stroke
+         */
         if (gmotorpos == 0) {
             cart_ischaemic_model2 = 0.05;
         } else {
@@ -290,7 +357,9 @@ public class calculatorstroke extends AppCompatActivity {
                     }
                 }
 
-                // cart model2 of haemorrhagic stroke classification
+                /**
+                 * CART model 2 for classification of haemorrhagic stroke
+                 */
                 if (glowgcs == 0) {
                     if (medicaltransport == 0) {
                         cart_haemorrhagic_model2 = 0.03;
@@ -344,6 +413,10 @@ public class calculatorstroke extends AppCompatActivity {
                     }
                 }
 
+                /**
+                 *  CART model 3 for classification of haemorrhagic  stroke
+                 */
+
                 // CART model3 of haemorrhagic stroke classification
                 if (pupils == 0) {
                     if (focalweek == 1) {
@@ -390,7 +463,9 @@ public class calculatorstroke extends AppCompatActivity {
                     }
                 }
 
-                //CART model4 of stroke mimics classification
+                /**
+                 * CART model 4 for classification of stroke mimics
+                 */
                 if (other == 0) {
                     if (speechloss == 1) {
                         cart_mimics_model4 = 0.28;
@@ -413,7 +488,9 @@ public class calculatorstroke extends AppCompatActivity {
                     cart_mimics_model4 = 0.94;
                 }
 
-                //CART model4 of haemorrhagic stroke classification
+                /**
+                 * CART model 4 for classification of haemorrhagic stroke
+                 */
                 if (glowgcs == 0) {
                     cart_haemorrhagic_model4 = 0.07;
                 } else {
@@ -424,7 +501,9 @@ public class calculatorstroke extends AppCompatActivity {
                     }
                 }
 
-                //CART model4 of ischaemic stroke classification
+                /**
+                 * CART model 4 for classification of ischaemic stroke
+                 */
                 if (gmotorpos == 0) {
                     cart_ischaemic_model4 = 0.05;
                 } else {
@@ -447,7 +526,9 @@ public class calculatorstroke extends AppCompatActivity {
                     }
                 }
 
-                // CART model5 of stroke mimics classification
+                /**
+                 * CART model 5 for classification of stroke mimics
+                 */
                 if (weakhand == 1) {
                     if (weakface == 1) {
                         cart_mimics_model5 = 0.22;
@@ -462,8 +543,13 @@ public class calculatorstroke extends AppCompatActivity {
                     }
                 }
 
-                // CART model5 of haemorrhagic stroke clasification: NA
-                // CART model5 of ischaemics stroke classification
+                /**
+                 * CART model 5 for classification of haemorrhagic stroke - N/A
+                 */
+
+                /**
+                 * CART model 5 for classification of ischaemic stroke
+                 */
                 if (weakarm == 0) {
                     cart_ischaemic_model5 = 0.06;
                 } else {
@@ -474,7 +560,9 @@ public class calculatorstroke extends AppCompatActivity {
                     }
                 }
 
-                //CART model6 of stroke mimics classification
+                /**
+                 * CART model 6 for classification of stroke mimics
+                 */
                 if (weakhand == 1) {
                     if (weakface == 1) {
                         cart_mimics_model6 = 0.22;
@@ -493,7 +581,9 @@ public class calculatorstroke extends AppCompatActivity {
                     }
                 }
 
-                // CART model6 of haemorrhaigic stroke classification;
+                /**
+                 * CART model 6 for classification of haemorrhagic stroke
+                 */
                 if (glowgcs == 0) {
                     cart_haemorrhagic_model6 = 0.07;
                     if (speechloss == 1) {
@@ -503,7 +593,9 @@ public class calculatorstroke extends AppCompatActivity {
                     }
                 }
 
-                //CART model6 of ischaemic stroke classification
+                /**
+                 * CART model 6 for classification of ischaemic stroke
+                 */
                 if (weakarm == 0) {
                     cart_ischaemic_model6 = 0.06;
                 } else {
@@ -514,7 +606,9 @@ public class calculatorstroke extends AppCompatActivity {
                     }
                 }
 
-                //Naive Bayes model1 of stroke mimcis classification;
+                /**
+                 * Naive Bayes model for classification of stroke mimics
+                 */
                 if (referred == 0) {
                     if (sudden == 0) {
                         if (pmhx == 0) {
@@ -601,7 +695,9 @@ public class calculatorstroke extends AppCompatActivity {
                     }
                 }
 
-                //Naive Bayes model1 of ischaemic stroke classification;
+                /**
+                 * Naive Bayes model 1 for classification of ischaemic stroke
+                 */
                 if (highcategory == 0) {
                     if (other == 0) {
                         if (speechloss == 0) {
@@ -655,7 +751,9 @@ public class calculatorstroke extends AppCompatActivity {
                         }
                     }
 
-                    //Naive Bayes model1 of haemorrhagic stroke classification;
+                    /**
+                     * Naive Bayes model 1 for classification of haemorrhagic stroke
+                     */
                     if (seizure == 0) {
                         if (sudden == 0) {
                             if (wellweekb4 == 0) {
@@ -738,7 +836,9 @@ public class calculatorstroke extends AppCompatActivity {
                         }
                     }
 
-                    //Naive Bayes model2 of stroke mimics classification;
+                    /**
+                     * Naive Bayes model 2 for classification of stroke mimics
+                     */
                     if (highcategory == 0) {
                         if (gsensepos == 0) {
                             if (wellweekb4 == 0) {
@@ -813,8 +913,9 @@ public class calculatorstroke extends AppCompatActivity {
                         }
                     }
 
-
-                    //Naive Bayes model2 of ischaemic stroke classification;
+                    /**
+                     * Naive Bayes model 2 for classification of ischaemic stroke
+                     */
                     if (pmhx == 0) {
                         if (referred == 0) {
                             if (highcategory == 0) {
@@ -873,7 +974,9 @@ public class calculatorstroke extends AppCompatActivity {
                         }
                     }
 
-                    //Naive Bayes model2 of haemorrhagic stroke classification;
+                    /**
+                     * Naive Bayes model 2 for classification of haemorrhagic stroke
+                     */
                     if (sudden == 0) {
                         nb_haemorrhagic_model2 = 0.05;
                     } else {
@@ -920,7 +1023,9 @@ public class calculatorstroke extends AppCompatActivity {
                         }
                     }
 
-                    //Naive Bayes model3 of stroke mimics classification;
+                    /**
+                     * Naive Bayes model 3 for classification of stroke mimics
+                     */
                     if (weakhand == 0) {
                         if (other2 == 0) {
                             if (visualdef == 0) {
@@ -1010,7 +1115,9 @@ public class calculatorstroke extends AppCompatActivity {
                             nb_mimics_model3 = 0.56;
                         }
 
-                        //Naive Bayes model3 of ischaemic stroke classification;
+                        /**
+                         * Naive Bayes model 3 for classification of ischaemic stroke
+                         */
                         if (weakleg == 0) {
                             if (other == 0) {
                                 if (visualdef == 0) {
@@ -1073,7 +1180,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        //Naive Bayes model3 of haemorrhagic stroke classification;
+                        /**
+                         * Naive Bayes model 3 for classification of haemorrhagic stroke
+                         */
                         if (focalweek == 0) {
                             if (weakleg == 0) {
                                 if (seizure == 0) {
@@ -1148,7 +1257,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        //Naive Bayes model 4 of stroke mimics classification;
+                        /**
+                         * Naive Bayes model for classification of stroke mimics
+                         */
                         if (loc == 0) {
                             if (other == 0) {
                                 if (speechloss == 0) {
@@ -1235,7 +1346,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        //Naive Bayes model 4 of ischaemic stroke clssification;
+                        /**
+                         * Naive Bayes model 4 for classification of ischaemic stroke
+                         */
                         if (gsignpos == 0) {
                             if (vomit == 0) {
                                 if (headace == 0) {
@@ -1302,7 +1415,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        // Naive Bayes model4 of haemorrhagic stroke classifiction
+                        /**
+                         * Naive Bayes model 4 for classification of haemorrhagic stroke
+                         */
                         if (seizure == 0) {
                             if (gsensepos == 0) {
                                 if (focalweek == 0) {
@@ -1385,7 +1500,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        //Naive Model5 of stroke mimics classification;
+                        /**
+                         * Naive Bayes model 5 for classification of stroke mimics
+                         */
                         if (gmotorpos == 0) {
                             if (gspeechpos == 0) {
                                 nb_mimics_model5 = 0.8;
@@ -1422,7 +1539,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        //Naive Model 5 of ischaemic stroke classification
+                        /**
+                         * Naive Bayes model for classification of ischaemic stroke
+                         */
                         if (gmotorpos == 0) {
                             if (gsignpos == 0) {
                                 nb_ischaemic_model5 = 0.02;
@@ -1469,8 +1588,13 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        // Naive Bayes model5 of haemorrhagic stroke classification: NA
-                        // Naive Bayes model6 of stroke mimics classification
+                        /**
+                         * Naive Bayes model 5 for classification of haemorrhagic stroke - N/A
+                         */
+
+                        /**
+                         * Naive Bayes model 6 for classification of stroke mimics
+                         */
                         if (weakarm == 0) {
                             if (gspeechpos == 0) {
                                 if (vertigo == 0) {
@@ -1517,7 +1641,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        //Naive Bayes model6 of haemorrhagic stroke classification;
+                        /**
+                         * Naive bayes model 6 for classification of haemorrhagic stroke
+                         */
                         if (gspeechpos == 0) {
                             if (weakhand == 0) {
                                 if (vertigo == 0) {
@@ -1560,7 +1686,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        //Naive Bayes model of ischaemic stroke classification;
+                        /**
+                         * Naive Bayes model for classification of ischaemic stroke
+                         */
                         if (weakhand == 0) {
                             if (dysphasia == 0) {
                                 if (gspeechpos == 0) {
@@ -1615,7 +1743,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        // probability calculator of stroke mimics in ensemble model
+                        /**
+                         * ensemble model for classification of stroke mimics
+                         */
                         if (nb_mimics_model6 < 0.47) {
                             if (nb_mimics_model3 < 0.49) {
                                 buckets_mimics_cart = 0;
@@ -1646,7 +1776,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        // probability calculator of ischaemic stroke in ensemble model
+                        /**
+                         * ensemble model for classificatio of ischaemic stroke
+                         */
                         if (cart_ischaemic_model3 < 0.28) {
                             if (nb_ischaemic_model1 < 0.5) {
                                 buckets_ischaemic_cart = 0.05;
@@ -1673,7 +1805,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        //probability calculator of haemorrhagic stroke in ensemble model
+                        /**
+                         * ensemble model for classification of haemorrhagic stroke
+                         */
                         if (cart_haemorrhagic_model2 < 0.04) {
                             buckets_haemorrhagic_cart = 0.01;
                         } else {
@@ -1688,7 +1822,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        //probability calculator of stroke mimics in cart ensemble model
+                        /**
+                         * ensemble model for classification of stroke mimics
+                         */
                         if (nb_mimics_model6 < 0.47) {
                             if (nb_mimics_model3 < 0.49) {
                                 stacking_mimics_cart = 0;
@@ -1719,7 +1855,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        //probability calculator of ischaemic stroke in cart ensemble model
+                        /**
+                         * CART ensemble model for classification of ischaemic stroke
+                         */
                         if (cart_ischaemic_model3 < 0.28) {
                             if (nb_ischaemic_model1 < 0.5) {
                                 stacking_ischaemic_cart = 0.05;
@@ -1734,7 +1872,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        //probability calculator of haemorrhagic stroke in cart ensemble model (stacking)
+                        /**
+                         *  Statcking CART ensemble model for classification of haemorrhagic stroke
+                         */
                         if (cart_haemorrhagic_model2 < 0.04) {
                             stacking_haemorrhagic_cart = 0.01;
                         } else {
@@ -1749,7 +1889,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-                        //probability calculator of stroke mimics stroke in nb ensemble model (bucket)
+                        /**
+                         * Bucket NB ensemble model for classification of stroke mimics
+                         */
                         if (nb_mimics_model4 == 0.29) {
                             buckets_mimics_nb = 0.29;
                         } else {
@@ -1911,7 +2053,9 @@ public class calculatorstroke extends AppCompatActivity {
                             }
                         }
 
-//probability calculator of ischaemic stroke in nb ensemble model (bucket)
+/**
+ * Bucket NB ensemble model for classification of ischaemic stroke
+  */
 if(nb_haemorrhagic_model4==0.04 && cart_haemorrhagic_model3 == 0){
     buckets_ischaemic_nb = 0.4;
 }else {
@@ -2044,7 +2188,9 @@ if(nb_haemorrhagic_model4==0.04 && cart_haemorrhagic_model3 == 0){
     }
 }
 
-//probability calculator of haemorrhagic stroke in nb ensemble model (bucket)
+/**
+ * Bucket NB ensemble model for classification of haemorrhagic stroke
+ */
 if(nb_haemorrhagic_model3 == 0.01){
     buckets_haemorrhagic_nb = 0.01;
 }else{
@@ -2129,8 +2275,9 @@ if(nb_haemorrhagic_model3 == 0.01){
     }
 }
 
-
- // probability calculator of stroke mimics in nb ensemble model (stacking)
+/**
+ * Stacking NB ensemble model for classification of stroke mimics
+ */
    if(nb_mimics_model4 == 0.29) {
        stacking_mimics_nb = 0.29;
    } else {
@@ -2219,8 +2366,9 @@ if(nb_haemorrhagic_model3 == 0.01){
        }
    }
 
-                        // probability calculator of ischaemic stroke in nb ensemble model (stacking)
-
+                        /**
+                         * Stacking NB ensemble model for classification of ischaemic stroke
+                         */
                         if (cart_ischaemic_model5 == 0.06 && nb_ischaemic_model5 == 0.02){
                             stacking_ischaemic_nb = 0.02;
                         }else {
@@ -2307,7 +2455,10 @@ if(nb_haemorrhagic_model3 == 0.01){
                             }
                         }
 
-                        // probability calculator of haemorrhagic stroke in nb ensemble model (stacking)
+
+                        /**
+                         * Stacking NB ensemble model for classifidation of haemorrhagic stroke
+                         */
                         if(nb_mimics_model4 == 0.29){
                             stacking_haemorrhagic_nb = 0.03;
                         }else{
@@ -2396,7 +2547,9 @@ if(nb_haemorrhagic_model3 == 0.01){
                             }
                         }
 
-           //stroke mimics - hybrid model
+                        /**
+                         * Hybrid model for classification of stroke mimics
+                         */
                         if(buckets_mimics_cart<0.5){
                             if(stacking_mimics_cart<0.35){
                                 probability_mimics = 0.02;
@@ -2456,7 +2609,9 @@ if(nb_haemorrhagic_model3 == 0.01){
             }
         }
 
-        // probability of ischaekmic stroke  - hybrid model
+        /**
+         * Hybrid model for classification of ischaemic stroke
+         */
         if(stacking_ischaemic_cart < 0.4){
             if(stacking_mimics_nb>=0.47){
                 probability_ischaemic = 0.04;
@@ -2483,7 +2638,9 @@ if(nb_haemorrhagic_model3 == 0.01){
             }
         }
 
-        // probability of haemorrhagic stroke  - hybrid model
+        /**
+         * Hybrid model for classification of haemorrhagic stroke
+         */
         if(buckets_haemorrhagic_cart<0.17){
             probability_haemorrhagic = 0.02;
         }else{

@@ -26,19 +26,19 @@ public class fragment_stroke1 extends Fragment {
                 SharedPreferences fragmentpreferences = getActivity().getPreferences(Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = fragmentpreferences.edit();
 
-                RadioGroup gender = (RadioGroup) getActivity().findViewById(R.id.gender_group);
+                RadioGroup gender = (RadioGroup) getActivity().findViewById(R.id.gendergroup);
                 int checkRadioButtonId_gender = gender.getCheckedRadioButtonId();
                 int gendershared = 0;
                 switch (checkRadioButtonId_gender) {
-                    case R.id.male:
+                    case R.id.gender0:
                         gendershared= 1;
                         break;
-                    case R.id.female:
+                    case R.id.gender1:
                         gendershared = 0;
                         break;
                 }
 
-                RadioGroup pmhxchoose = (RadioGroup) getActivity().findViewById(R.id.pmhx_group);
+                RadioGroup pmhxchoose = (RadioGroup) getActivity().findViewById(R.id.pmhxgroup);
                 int checkRadioButtonId_pmhx = pmhxchoose.getCheckedRadioButtonId();
                 int pmhxshared = 0;
                 switch (checkRadioButtonId_pmhx) {
@@ -50,7 +50,7 @@ public class fragment_stroke1 extends Fragment {
                         break;
                 }
 
-                RadioGroup wokechoose = (RadioGroup) getActivity().findViewById(R.id.woke_group);
+                RadioGroup wokechoose = (RadioGroup) getActivity().findViewById(R.id.wokegroup);
                 int checkRadioButtonId_woke = wokechoose.getCheckedRadioButtonId();
                 int wokeshared = 0;
                 switch (checkRadioButtonId_woke) {
@@ -62,7 +62,7 @@ public class fragment_stroke1 extends Fragment {
                         break;
                 }
 
-                RadioGroup wellweekb4choose = (RadioGroup) getActivity().findViewById(R.id.wellweekb4_group);
+                RadioGroup wellweekb4choose = (RadioGroup) getActivity().findViewById(R.id.wellweekb4group);
                 int checkRadioButtonId_wellweekb4 = wellweekb4choose.getCheckedRadioButtonId();
                 int wellweekb4shared = 0;
                 switch (checkRadioButtonId_wellweekb4) {
@@ -74,7 +74,7 @@ public class fragment_stroke1 extends Fragment {
                         break;
                 }
 
-                RadioGroup medicaltransportchoose = (RadioGroup) getActivity().findViewById(R.id.medicaltransport_group);
+                RadioGroup medicaltransportchoose = (RadioGroup) getActivity().findViewById(R.id.medicaltransportgroup);
                 int checkRadioButtonId_medicaltransport = medicaltransportchoose.getCheckedRadioButtonId();
                 int medicaltransportshared = 0;
                 switch (checkRadioButtonId_medicaltransport) {
